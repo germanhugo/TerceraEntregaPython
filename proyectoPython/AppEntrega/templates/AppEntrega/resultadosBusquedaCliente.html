@@ -1,0 +1,15 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p> Estamos buscando el auto: {{nombre}} </p>
+
+    {% if clientes %}
+    <ul>{% for cliente in clientes %}
+        <li> {{cliente.nombre}}  -  {{cliente.telefono}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% endblock %}

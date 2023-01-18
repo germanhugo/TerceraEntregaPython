@@ -1,0 +1,10 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+        <form action="buscarAuto" method="GET">
+            <input type="text" name="patente" id="patente">
+            <input type="submit" value="Buscar" />
+        </form>
+{% endblock %}

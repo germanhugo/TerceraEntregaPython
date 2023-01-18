@@ -1,0 +1,15 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p> Estamos buscando los services de la fecha: {{fecha}} </p>
+
+    {% if services %}
+    <ul>{% for service in services %}
+        <li> {{service.fecha}}  -  Cambio Aceite:  {{service.cambioAceite}} -  Cambio Filtros:  {{service.cambioFiltros}}  -  {{service.valor}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% endblock %}

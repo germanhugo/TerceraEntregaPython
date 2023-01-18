@@ -1,0 +1,15 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p> Estamos buscando el auto: {{patente}} </p>
+
+    {% if autos %}
+    <ul>{% for auto in autos %}
+        <li> {{auto.patente}}  -  {{auto.marca}} - {{auto.modelo}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% endblock %}
