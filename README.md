@@ -11,3 +11,10 @@ En la navbar de la parte superior, al seleccionar inicio se verán los buscadore
 Al cargar los datos por formulario quedan guardados en sqlite.
 
 Se puede ingresar al admin a través la la url /admin utilizando el usuario "german" y la contraseña "Coder1234", se crearon los métodos str para identificar los datos directamente en el admin sin tener que entrar a cada object.
+
+
+# Se actualiza con los cambios para el proyecto final
+
+Link al video en la siguiente url:
+https://drive.google.com/drive/folders/1NdeepcCX1_iRPxwAZyykxrggHT9mLAgG?usp=sharing
+
