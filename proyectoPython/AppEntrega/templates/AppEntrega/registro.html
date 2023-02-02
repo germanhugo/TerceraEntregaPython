@@ -1,0 +1,23 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<br/>
+<div class="contact-fluid">
+    <div class="row">
+        <div class="col-4" >
+            <b>Agregar nuevo usuario</b>
+            <br/>
+            <form action="" method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+             <button type="submit">Guardar usuario</button>
+            </form>    
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+    

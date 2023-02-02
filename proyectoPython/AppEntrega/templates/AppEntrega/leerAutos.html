@@ -1,0 +1,43 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="contact-fluid">
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+            <b>Listado de autos</b>
+        </div>
+    </div>
+    </br>
+
+    {% for auto in autos %}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            {{auto}}
+        </div>
+        <div class="col-2">
+          <a href="{% url 'EliminarAuto' auto.patente %}"> Eliminar</a>
+        </div>
+        <div class="col-2">  
+            <a href="{% url 'EditarAuto' auto.patente %}"> Editar</a>
+        </div>
+    </div>
+
+    {% endfor %}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            <br><a href="autoFormulario">Agregar otro Auto</a>
+        </div>
+    </div>
+</div>
+    
+
+
+
+{% endblock %}

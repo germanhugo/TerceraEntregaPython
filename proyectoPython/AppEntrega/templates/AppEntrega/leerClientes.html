@@ -1,0 +1,40 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="contact-fluid">
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-5">
+            <b>Listado de clientes</b>
+        </div>
+    </div>
+    <br/>
+    {% for cliente in clientes %}
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-5">
+        {{cliente}}
+        </div>
+        <div class="col-2">
+            <a href="{% url 'EliminarCliente' cliente.dni %}"> Eliminar</a>  
+        </div>
+        <div class="col-2">
+            <a href="{% url 'EditarCliente' cliente.dni %}"> Editar</a> 
+        </div>
+    </div>
+
+    {% endfor %}
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-5">
+            <br><a href="clienteFormulario">Agregar otro cliente</a>
+        </div>
+</div>
+{% endblock %}
+

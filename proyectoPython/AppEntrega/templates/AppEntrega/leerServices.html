@@ -1,0 +1,39 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="contact-fluid">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+             <b>Listado de autos</b>
+        </div>
+    </div>
+    </br>
+
+    {% for service in services %}
+    
+     <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            {{service}}
+        </div>
+        <div class="col-2">
+            <a href="{% url 'EliminarService' service.comprobante %}"> Eliminar</a>
+        </div>
+        <div class="col-2">  
+            <a href="{% url 'EditarService' service.comprobante %}"> Editar</a>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            <br><a href="serviceFormulario">Agregar otro service</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

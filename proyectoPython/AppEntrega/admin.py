@@ -11,3 +11,6 @@ admin.site.register(Cliente)
 
 admin.site.register(Service)
 
+admin.site.register(Avatar)
+
+admin.site.register(Comentarios)

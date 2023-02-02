@@ -1,0 +1,49 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+   
+<!--  en esta sección se listarán los comentarios de clientes -->
+
+
+<div class="contact-fluid">
+    
+    <br />
+
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-5"> 
+             <b>Comentarios de clientes</b>
+        </div>
+    </div>
+        
+    <br />
+
+    {% for comentario in comentarios %}
+
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+            <b>Autor: </b> {{comentario.autor}}
+        </div>
+        <div class="col-2">
+            <b>Valoración: </b>{{comentario.titulo}}  
+        </div>
+        <div class="col-2">
+            <a href="{% url 'VerMas' comentario.id %}"> Ver más</a>
+        </div>
+    </div>
+
+    {% endfor %}
+       
+    
+</div>
+
+
+
+
+
+{% endblock %}

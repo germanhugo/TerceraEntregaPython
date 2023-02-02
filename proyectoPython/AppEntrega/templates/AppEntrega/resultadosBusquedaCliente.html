@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block contenidoQueCambia %}
-<p> Estamos buscando el auto: {{nombre}} </p>
+<p> Estamos buscando el cliente con nombre: {{nombre}} </p>
 
     {% if clientes %}
     <ul>{% for cliente in clientes %}
-        <li> {{cliente.nombre}}  -  {{cliente.telefono}} </li>
+        <li>{{cliente.dni}}: {{cliente.nombre}}  -  {{cliente.telefono}} </li>
         {% endfor %}
     </ul>
     {% endif %}
